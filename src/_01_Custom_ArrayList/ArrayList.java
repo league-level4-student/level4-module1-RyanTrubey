@@ -28,6 +28,11 @@ public class ArrayList <T>{
 		
 	}
 	
+	public int size() {
+		
+		return 1;
+	}
+	
 	public boolean contains(T val) {
 		
 		return false;
