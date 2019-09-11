@@ -34,6 +34,9 @@ public class CustomButtonOptionPanes {
 		case 6:
 			System.out.println("saturysday");
 			break;
+		default:
+			System.out.println("defuaslt");
+			break;
 		}
 		
 	}
