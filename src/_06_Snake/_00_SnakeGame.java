@@ -39,7 +39,6 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 
 	public _00_SnakeGame() {
 		snake = new Snake(new Location(WIDTH / 2, HEIGHT / 2));
-
 		window = new JFrame("Snake");
 		panel = new JPanel() {
 			private static final long serialVersionUID = 1L;
@@ -94,10 +93,10 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 			timer.setDelay(40);
 			break;
 		case 2:
-			timer.setDelay(80);
+			timer.setDelay(200);
 			break;
 		default:
-			timer.setDelay(80);
+			timer.setDelay(200);
 		}
 		//3. start the timer
 		timer.start();
