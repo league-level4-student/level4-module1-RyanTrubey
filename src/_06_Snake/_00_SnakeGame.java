@@ -87,16 +87,16 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		
 		switch(input) {
 		case 0:
-			timer.setDelay(20);
+			timer.setDelay(50);
 			break;
 		case 1:
-			timer.setDelay(40);
+			timer.setDelay(100);
 			break;
 		case 2:
 			timer.setDelay(200);
 			break;
 		default:
-			timer.setDelay(200);
+			timer.setDelay(400);
 		}
 		//3. start the timer
 		timer.start();
@@ -166,6 +166,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		int playagain = JOptionPane.showConfirmDialog(null, "Do you want to play again?", "Play Again", 0);
 		if(playagain == 0) {
 			snake.reset(new Location(WIDTH/2, HEIGHT/2));
+			timer.restart();
 		} else {
 			System.exit(0);
 		}
@@ -197,6 +198,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		// 	 feed the snake and set the food location
 		if(snake.getHeadLocation().equals(foodLocation)) {
 			snake.feed();
+			setFoodLocation();
 		}
 		//4. call panel.repaint();
 		panel.repaint();
